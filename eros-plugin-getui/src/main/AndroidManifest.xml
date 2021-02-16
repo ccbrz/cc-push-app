@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.eros.plugin.getui">
+
+    <application android:allowBackup="false">
+        <!-- 用户自定义服务继承自GTIntentService,作为SDK与APP桥梁服务,用来接收各种消息和命令回复-->
+        <service
+            android:name="com.eros.plugin.getui.service.MyGetuiIntentService"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+        <!-- 用户自定义服务名 -->
+        <service
+            android:name="com.eros.plugin.getui.service.MyGetuiService"
+            android:exported="true"
+            android:label="PushService"
+            android:process=":pushservice" />
+        <activity
+            android:name="com.eros.plugin.getui.ui.ProxyActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"></activity>
+    </application>
+</manifest>

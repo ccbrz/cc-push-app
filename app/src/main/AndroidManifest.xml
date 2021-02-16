@@ -123,24 +123,10 @@
 
         <service android:name="com.amap.api.location.APSService"></service>
         <!--amap finish-->
-        <meta-data
-            android:name="PUSH_APPID"
-            android:value="${GETUI_APP_ID}"/>
-        <meta-data
-            android:name="PUSH_APPKEY"
-            android:value="${GETUI_APP_KEY}"/>
-        <meta-data
-            android:name="PUSH_APPSECRET"
-            android:value="${GETUI_APP_SECRET}"/>
 
-        <receiver
-            android:name="com.eros.erosplugingt.GTPushReceiver"
-            android:exported="false">
-            <intent-filter>
-                <action android:name="com.igexin.sdk.action.${GETUI_APP_ID}"/>
-            </intent-filter>
-        </receiver>
-
+        <!--        getui-->
+        <meta-data android:name="GETUI_APPID" android:value="${GETUI_APPID}" />
+        <!--        getui finish-->
     </application>
 
 </manifest>

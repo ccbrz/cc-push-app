@@ -17,6 +17,14 @@ android {
             abiFilters "x86"
             abiFilters "armeabi"
         }
+
+        compileOptions {
+            sourceCompatibility JavaVersion.VERSION_1_8
+            targetCompatibility JavaVersion.VERSION_1_8
+        }
+        manifestPlaceholders = [
+            GETUI_APPID    : '4yauIvHWQZ8ti67a5zITN1',
+        ]
     }
 
     signingConfigs {
@@ -36,9 +44,6 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             signingConfig signingConfigs.eros
             manifestPlaceholders=[
-                                  GETUI_APP_ID:GETUI_APPID,
-                                  GETUI_APP_KEY:GETUI_APPKEY,
-                                  GETUI_APP_SECRET:GETTUI_APPSECRET,
                                   APP_ID:APPLICATION_ID
             ]
         }
@@ -48,9 +53,6 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             signingConfig signingConfigs.eros
             manifestPlaceholders=[
-                                  GETUI_APP_ID:GETUI_APPID,
-                                  GETUI_APP_KEY:GETUI_APPKEY,
-                                  GETUI_APP_SECRET:GETTUI_APPSECRET,
                                   APP_ID:APPLICATION_ID
             ]
         }
@@ -97,4 +99,5 @@ dependencies {
     compile project(':nexus')
     compile project(':wxframework')
 
+    api project(':eros-plugin-getui')
 }
