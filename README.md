@@ -32,9 +32,9 @@ globalEvent.addEventListener('OnReceivePush', function (options) {
 端上约定的消息体如下:
 ```
 {
-  "title":'{消息通知标题}'，
-  “content”:'{消息通知内容}',
-  extraData:'{额外参数，用于业务逻辑处理等 端上不关注 直接透传给前端 类型为JSON}'
+  "title":“{消息通知标题}”，
+  “content”:”{消息通知内容}“,
+  “extraData”:“{额外参数，用于业务逻辑处理等 端上不关注 直接透传给前端 类型为JSON}”
  }
 ```
 
